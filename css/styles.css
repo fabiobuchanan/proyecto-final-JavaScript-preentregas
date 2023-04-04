@@ -1,0 +1,430 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100%;
+}
+
+/* HEADER ----------------------------------------------------------------------------------------------------------*/
+
+.body-grid__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a:hover {
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+ul a {
+    color: black;
+    font-family: 'Secular One', sans-serif;
+}
+
+.body-grid__header__logo img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .body-grid__header {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+/* PRIMER BODY -----------------------------------------------------------------------------------------------------*/
+
+#primer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 600px;
+    position: relative;
+}
+
+#primer-body:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url(../img/fondobody2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.primer-body__div {
+    position: relative;
+    height: 500px;
+    padding-left: 70px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+}
+
+
+.primer-body__div {
+    height: 500px;
+    padding-left: 35px;
+    padding-top: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    #primer-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: left;
+        padding-left: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+.primer-body__div  {
+    font-family: 'Raleway', sans-serif;
+}
+
+.primer-body__main-image img {
+    height: 400px;
+    width: 100%;
+    padding: 5px;
+}
+
+.primer-body__div-list-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+    padding-left: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* BUTTON */
+/*
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "+ info";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+
+/* MAIN GRID -------------------------------------------------------------------------------------------------------*/
+
+#main-grid {
+    height: 2000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.main-grid__index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+    row-gap: 20px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+}
+
+.main-grid__index2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+    row-gap: 20px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .main-grid__index {
+        grid-template-columns: repeat(2, 250px); 
+        grid-template-rows: 200px 200px;
+        column-gap: 20px;
+        align-items: baseline;
+        justify-content: right;
+    }
+
+    .main-grid__index2 {
+        grid-template-columns: repeat(2, 250px); 
+        grid-template-rows: 200px 200px;
+        column-gap: 20px;
+        align-items: baseline;
+        justify-content: right;
+    }
+}
+
+.main-grid__index-divs1 {
+    height: 400px;
+}
+
+.main-grid__index-divs1 div {
+    text-align: center;
+}
+
+.main-grid__index-divs2 {
+    height: 400px;
+}
+
+.main-grid__index-divs2 div {
+    text-align: center;
+}
+
+.main-grid__index-divs3 {
+    height: 400px;
+}
+
+.main-grid__index-divs3 div {
+    text-align: center;
+}
+
+.main-grid__index-divs4 {
+    height: 400px;
+}
+
+.main-grid__index-divs4 div {
+    text-align: center;
+}
+
+.main-grid__index-divs1 div img {
+    height: 200px;
+    width: 150px;
+}
+
+.main-grid__index-divs2 div img {
+    height: 200px;
+    width: 150px;
+}
+
+.main-grid__index-divs3 div img {
+    height: 200px;
+    width: 150px;
+}
+
+.main-grid__index-divs4 div img {
+    height: 200px;
+    width: 150px;
+}
+
+/* FOOTER ------------------------------------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.main-grid__footer__div h3, h4 {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+/* FOOTER ICONS ---------------------------------------------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100%;
+  width: 100%;  
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+} 
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+ul li img {
+    height: 25px;
+    width: 25px;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
