@@ -31,7 +31,7 @@ if(producto.toUpperCase() == PRODUCTO_UNO || producto.toLowerCase() == PRODUCTO_
             console.log("Has seleccionado la suscripción Anual. Precio: " + anual + " " + "dólares." + " " + "Tendrás acceso a toda la plataforma y su contenido, tanto clases como cursos.");
             break;    
         default:
-            productoSuscripciones = "Suscripción ingresada inexistente. Por favor, intente nuevamente."
+            prompt("Suscripción ingresada inexistente. Por favor, intente nuevamente.");
     }
 } else if(producto.toUpperCase() == PRODUCTO_DOS || producto.toLowerCase() == PRODUCTO_DOS){
     productoClases = Number(prompt("Elige entre las siguientes opciones: 3, 5, 7, 9. O bien el porcentaje deseado para cada paquete de clases, respectivamente: 17, 20, 15, 17."));
@@ -57,5 +57,5 @@ if(producto.toUpperCase() == PRODUCTO_UNO || producto.toLowerCase() == PRODUCTO_
             productoSuscripciones = "Clase ingresada inexistente. Por favor, intente nuevamente."
     }
   } else if(producto !== PRODUCTO_UNO && producto !== PRODUCTO_DOS){
-    producto = prompt("Ha ingresado información inválida. Por favor intente nuevamente.");
+        prompt("Ha ingresado información inválida. Por favor intente nuevamente.");
 }
