@@ -9,6 +9,10 @@ let paqueteTres = 10;
 let paqueteCinco = 16;
 let paqueteSiete = 24;
 let paqueteNueve = 30;
+let paquetePorUno = 17;
+let paquetePorDos = 15;
+let paquetePorTres = 20;
+let paquetePorCuatro = 18;
 let validar;
 
 // DECLARO FUNCIONES
@@ -41,10 +45,10 @@ const esValidoClase = (clase) => {
     case 5:
     case 7:
     case 9:
-    case 17:
-    case 20:
-    case 15:
-    case 18:
+    case paquetePorUno:
+    case paquetePorDos:
+    case paquetePorTres:
+    case paquetePorCuatro:
       valido = true;
       break;
   }
@@ -135,13 +139,13 @@ if (producto === PRODUCTO_DOS) {
   do {
     productoClases = Number(
       prompt(
-        "Elige entre las siguientes opciones: 3, 5, 7, 9. O bien el porcentaje deseado para cada paquete de clases, respectivamente: 17, 20, 15, 17."
+        "Elige entre las siguientes opciones: 3, 5, 7, 9. O bien el porcentaje deseado para cada paquete de clases, respectivamente: 17, 20, 15, 18."
       )
     );
   } while (!esValidoClase(productoClases));
 
   console.log(
-    "Elige entre las siguientes opciones: 3, 5, 7, 9. O bien el porcentaje deseado para cada paquete de clases, respectivamente: 17, 20, 15, 17."
+    "Elige entre las siguientes opciones: 3, 5, 7, 9. O bien el porcentaje deseado para cada paquete de clases, respectivamente: 17, 20, 15, 18."
   );
   switch (productoClases) {
     case 3:
@@ -149,6 +153,8 @@ if (producto === PRODUCTO_DOS) {
         "Has seleccionado el paquete de " +
           productoClases +
           " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteTres +
           " " +
@@ -158,11 +164,28 @@ if (producto === PRODUCTO_DOS) {
       console.log(
         "Has seleccionado el paquete de " +
           productoClases +
+          " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteTres +
           " " +
           "dólares." +
           " "
+      );
+      break;
+    case paquetePorUno:
+      alert(
+        "Has seleccionado el paquete de 3 clases con el porcentaje de descuento de " +
+          paquetePorUno +
+          " " +
+          "por ciento."
+      );
+      console.log(
+        "Has seleccionado el paquete de 5 clases con el porcentaje de descuento de " +
+          paquetePorUno +
+          " " +
+          "por ciento."
       );
       break;
     case 5:
@@ -170,6 +193,8 @@ if (producto === PRODUCTO_DOS) {
         "Has seleccionado el paquete de " +
           productoClases +
           " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteCinco +
           " " +
@@ -179,11 +204,28 @@ if (producto === PRODUCTO_DOS) {
       console.log(
         "Has seleccionado el paquete de " +
           productoClases +
+          " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteCinco +
           " " +
           "dólares." +
           " "
+      );
+      break;
+    case paquetePorDos:
+      alert(
+        "Has seleccionado el paquete de 5 clases con el porcentaje de descuento de " +
+          paquetePorDos +
+          " " +
+          "por ciento."
+      );
+      console.log(
+        "Has seleccionado el paquete de 5 clases con el porcentaje de descuento de " +
+          paquetePorDos +
+          " " +
+          "por ciento."
       );
       break;
     case 7:
@@ -191,6 +233,8 @@ if (producto === PRODUCTO_DOS) {
         "Has seleccionado el paquete de " +
           productoClases +
           " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteSiete +
           " " +
@@ -200,6 +244,9 @@ if (producto === PRODUCTO_DOS) {
       console.log(
         "Has seleccionado el paquete de " +
           productoClases +
+          " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteSiete +
           " " +
@@ -207,10 +254,26 @@ if (producto === PRODUCTO_DOS) {
           " "
       );
       break;
+    case paquetePorTres:
+      alert(
+        "Has seleccionado el paquete de 7 clases con el porcentaje de descuento de " +
+          paquetePorTres +
+          " " +
+          "por ciento."
+      );
+      console.log(
+        "Has seleccionado el paquete de 7 clases con el porcentaje de descuento de " +
+          paquetePorTres +
+          " " +
+          "por ciento."
+      );
+      break;
     case 9:
       alert(
         "Has seleccionado el paquete de " +
           productoClases +
+          " " +
+          "clases" +
           " " +
           "por el precio de " +
           paqueteNueve +
@@ -221,11 +284,28 @@ if (producto === PRODUCTO_DOS) {
       console.log(
         "Has seleccionado el paquete de " +
           productoClases +
+          " " +
+          "clases" +
+          " " +
           "por el precio de " +
           paqueteNueve +
           " " +
           "dólares." +
           " "
+      );
+      break;
+    case paquetePorCuatro:
+      Alert(
+        "Has seleccionado el paquete de 9 clases con el porcentaje de descuento de " +
+          paquetePorCuatro +
+          " " +
+          "por ciento."
+      );
+      console.log(
+        "Has seleccionado el paquete de 9 clases con el porcentaje de descuento de " +
+          paquetePorCuatro +
+          " " +
+          "por ciento."
       );
       break;
     default:
